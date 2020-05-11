@@ -1,10 +1,10 @@
 package com.abstract_factory;
 
-public class AbstractProgram {
+public class Application {
     private Button button;
     private Checkbox checkbox;
 
-    public AbstractProgram(GuiFactory factory) {
+    public Application(GuiFactory factory) {
         this.button = factory.createButton();
         this.checkbox = factory.createCheckbox();
     }

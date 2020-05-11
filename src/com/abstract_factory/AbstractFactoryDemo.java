@@ -1,8 +1,8 @@
 package com.abstract_factory;
 
-public class AbstractDemo {
-    public static AbstractProgram configureProgram() {
-        AbstractProgram program;
+public class AbstractFactoryDemo {
+    public static Application configureProgram() {
+        Application program;
         GuiFactory factory;
 
         String osName = System.getProperty("os.name").toLowerCase();
@@ -12,8 +12,12 @@ public class AbstractDemo {
         } else {
             factory = new LinuxFactory();
         }
-        program = new AbstractProgram(factory);
+        program = new Application(factory);
 
         return program;
+    }
+
+    public static void main(String[] args) {
+        configureProgram().paint();
     }
 }
