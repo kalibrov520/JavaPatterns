@@ -1,4 +1,4 @@
-package com.abstract_factory;
+package com.creational.abstract_factory;
 
 public class Application {
     private Button button;

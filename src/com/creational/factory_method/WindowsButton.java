@@ -1,9 +1,7 @@
-package com.factory_method;
+package com.creational.factory_method;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 public class WindowsButton implements Button {
     JPanel panel = new JPanel();
