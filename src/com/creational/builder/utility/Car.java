@@ -28,4 +28,14 @@ public class Car {
     public Transmission getTransmission() {
         return transmission;
     }
+
+    @Override
+    public String toString() {
+        return "Car{" +
+                "type=" + type +
+                ", seats=" + seats +
+                ", engine=" + engine +
+                ", transmission=" + transmission +
+                '}';
+    }
 }

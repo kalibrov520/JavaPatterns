@@ -13,12 +13,13 @@ public class Manual {
         this.transmission = transmission;
     }
 
-    public String print() {
-        String info = "";
-        info += "Type of car: " + type + "\n";
-        info += "Count of seats: " + seats + "\n";
-        info += "Engine: volume - " + engine.getVolume() + "; mileage - " + engine.getMileage() + "\n";
-        info += "Transmission: " + transmission + "\n";
-        return info;
+    @Override
+    public String toString() {
+        return "Manual{" +
+                "type=" + type +
+                ", seats=" + seats +
+                ", engine=" + engine +
+                ", transmission=" + transmission +
+                '}';
     }
 }

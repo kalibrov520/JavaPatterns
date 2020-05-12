@@ -5,33 +5,37 @@ import com.creational.builder.utility.Engine;
 import com.creational.builder.utility.Transmission;
 import com.creational.builder.utility.Type;
 
-public class CarBuilder implements Builder {
+public class CarBuilder implements Builder<CarBuilder> {
     private Type type;
     private int seats;
     private Engine engine;
     private Transmission transmission;
 
     @Override
-    public void setType(Type type) {
+    public CarBuilder setType(Type type) {
         this.type = type;
+        return this;
     }
 
     @Override
-    public void setSeats(int seats) {
+    public CarBuilder setSeats(int seats) {
         this.seats = seats;
+        return this;
     }
 
     @Override
-    public void setEngine(Engine engine) {
+    public CarBuilder setEngine(Engine engine) {
         this.engine = engine;
+        return this;
     }
 
     @Override
-    public void setTransmission(Transmission transmission) {
+    public CarBuilder setTransmission(Transmission transmission) {
         this.transmission = transmission;
+        return this;
     }
 
-    public Car getResult() {
-        return new Car(type, seats, engine, transmission);
+    public Car build() {
+        return new Car(this.type, this.seats, this.engine, this.transmission);
     }
 }
